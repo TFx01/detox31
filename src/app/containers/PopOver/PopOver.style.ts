@@ -47,6 +47,8 @@ export const Container = styled.div<any>`
     right: 0;
     width: 100%;
     height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -60,6 +62,7 @@ export const Container = styled.div<any>`
     cursor: pointer;
     background: #fff;
     padding: 6px;
+    -webkit-box-shadow: rgba(18, 38, 58, 0.4) 0px 7px 14px -10px;
     box-shadow: rgba(18, 38, 58, 0.4) 0px 7px 14px -10px;
 
     .cls-1 {
@@ -83,6 +86,7 @@ export const PopOverStyled = styled.div`
   min-width: 200px;
   border-radius: 15px;
   border: 2px solid rgba(225, 225, 225, 0.5);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.22) 0px 7px 20px -10px;
   box-shadow: rgba(0, 0, 0, 0.22) 0px 7px 20px -10px;
 
   @media (max-width: 480px) {

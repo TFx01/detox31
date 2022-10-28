@@ -10,6 +10,8 @@ export const Container = styled.div<any>`
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: var(--visibility);
+  -webkit-transition: all ease 500ms;
+  -o-transition: all ease 500ms;
   transition: all ease 500ms;
   overflow-y: auto;
   z-index: 3;
@@ -30,6 +32,8 @@ export const ModalStyled = styled.section<any>`
   position: relative;
   padding: 0 20px;
   border-radius: 10px;
+  -webkit-transition: all ease 300ms;
+  -o-transition: all ease 300ms;
   transition: all ease 300ms;
   overflow-y: auto;
   will-change: transform;
@@ -40,7 +44,11 @@ export const ModalStyled = styled.section<any>`
   }
 
   header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: sticky;
     top: 0;

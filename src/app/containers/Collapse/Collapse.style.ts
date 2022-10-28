@@ -10,7 +10,12 @@ export const Container = styled.section<any>`
 
 export const ItemStyled = styled.article<any>`
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: nowrap column;
   flex-flow: nowrap column;
 
   & ~ & {
@@ -25,6 +30,8 @@ export const BodyStyled = styled.section<any>`
   }};
   overflow: ${({ active }) => (active ? 'auto' : 'hidden')};
   visibility: ${({ active }) => (active ? 'visible' : 'hidden')};
+  -webkit-transition: all ease 400ms;
+  -o-transition: all ease 400ms;
   transition: all ease 400ms;
   will-change: height;
 
@@ -47,9 +54,14 @@ export const HeaderStyled = styled.header<any>`
   padding: 0px 25px;
   border-radius: 10px;
   height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 20px -20px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 20px -20px;
   border: 1px solid rgba(225, 225, 225, 1);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   h3 {

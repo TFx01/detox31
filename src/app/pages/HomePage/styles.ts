@@ -2,26 +2,50 @@ import styled from 'styled-components';
 import { media } from 'styles/media';
 
 export const MainHeader = styled.header`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   ${media.xsmall`
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   `}
   ${media.small`
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   `}
   ${media.medium`
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
     flex-direction:row;
   `}
   ${media.large`
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
     flex-direction:row;
   `}
   ${media.xlarge`
-    flex-direction: row;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
+    flex-direction:row;
   `}
   > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     h1 {
       max-width: 700px;
@@ -100,6 +124,8 @@ export const HeaderDescritive = styled.header`
   flex-direction: column;
   padding: 40px 0 30px;
   > div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
     text-align: center;
@@ -113,7 +139,6 @@ export const HeaderDescritive = styled.header`
     p {
       /* color: #e2e2e2; */
       color: #545854;
-
       font-family: 'Jones Medium';
 
       ${media.xsmall`
@@ -142,11 +167,20 @@ export const HeaderDescritive = styled.header`
 export const Benefits = styled.ul`
   list-style: none;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: wrap row;
   flex-flow: wrap row;
   gap: 10px;
   li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #545854;
     font-family: 'Jones Book';
@@ -156,8 +190,11 @@ export const Benefits = styled.ul`
     padding: 16px 20px;
     border-radius: 10px;
     /* width: 440px; */
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
     display: flex;
+    -webkit-box-shadow: rgba(18, 38, 58, 0.1) 0px 7px 14px -10px;
     box-shadow: rgba(18, 38, 58, 0.1) 0px 7px 14px -10px;
     border: 1px solid rgba(225, 225, 225, 1);
 
@@ -165,19 +202,33 @@ export const Benefits = styled.ul`
       width: 100%;
     `}
     ${media.small`
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: flex-start;
       width: 100%;
     `}
     ${media.medium`
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
-      justify-content: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center
     `}
     ${media.large`
-     justify-content: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
     `}
     ${media.xlarge`
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
     `}
 
@@ -198,22 +249,33 @@ export const Benefits = styled.ul`
 export const BenefitsPopOver = styled.ul`
   list-style: none;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: nowrap column;
   flex-flow: nowrap column;
   gap: 10px;
 
   > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #545854;
-
     font-family: 'Jones Book';
     font-size: 1.6rem;
     background: rgba(255, 255, 255, 1);
     padding: 16px 20px;
     border-radius: 10px;
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
     display: flex;
+    -webkit-box-shadow: rgba(18, 38, 58, 0.1) 0px 7px 14px -10px;
     box-shadow: rgba(18, 38, 58, 0.1) 0px 7px 14px -10px;
     border: 1px solid rgba(225, 225, 225, 1);
     padding: 16px 20px;
@@ -251,13 +313,20 @@ export const StyledCarouselItem = styled.article`
   color: #fff;
   position: relative;
   overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 10px -10px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 10px -10px;
 
   header {
     height: 35%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -270,9 +339,12 @@ export const StyledCarouselItem = styled.article`
     width: 100%;
     /* margin: 0; */
     border-radius: 100vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 1.8rem;
     font-family: 'Jones Bold';
+    -webkit-box-shadow: rgba(18, 38, 58, 0.12) 0px 7px 14px -10px;
     box-shadow: rgba(18, 38, 58, 0.12) 0px 7px 14px -10px;
   }
 
@@ -292,6 +364,7 @@ export const StyledCarouselItem = styled.article`
     z-index: 1;
     width: 100%;
     height: 35%;
+    -o-object-fit: cover;
     object-fit: cover;
     right: 0;
     position: absolute;
@@ -300,8 +373,12 @@ export const StyledCarouselItem = styled.article`
 
 export const Client = styled.article`
   background: rgba(255, 255, 255, 0.07);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
+  -ms-flex-preferred-size: 300px;
   flex-basis: 300px;
   height: auto;
   color: #fff;
@@ -309,11 +386,16 @@ export const Client = styled.article`
   overflow: hidden;
   padding: 20px;
   border-radius: 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 12px -10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 12px -10px;
   border: 1px solid rgba(225, 225, 225, 1);
 
   header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 17px;
     padding: 10px 0 20px;
@@ -356,6 +438,8 @@ export const Tabs = styled.div`
       padding: 10px 15px;
       cursor: pointer;
       opacity: 1;
+      -webkit-transition: opacity ease 100ms;
+      -o-transition: opacity ease 100ms;
       transition: opacity ease 100ms;
       border-bottom: 2px solid transparent;
 
@@ -419,16 +503,26 @@ export const Tabs = styled.div`
   .tab__photos,
   .tab__videos {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: wrap row;
     flex-flow: wrap row;
     gap: 10px;
     img {
       border-radius: 15px;
       height: 150px;
       width: 100px;
+      -o-object-fit: cover;
       object-fit: cover;
       cursor: pointer;
+      -webkit-transition: -webkit-filter ease 500ms;
+      transition: -webkit-filter ease 500ms;
+      -o-transition: filter ease 500ms;
       transition: filter ease 500ms;
+      transition: filter ease 500ms, -webkit-filter ease 500ms;
 
       &:hover {
         filter: brightness(1.2);
@@ -452,25 +546,44 @@ export const Avaliations = styled.div`
 `;
 
 export const ProductRow = styled.section`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
   width: 100%;
   margin: 100px 0 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: wrap row;
   flex-flow: wrap row;
 `;
 export const Product = styled.div`
   height: auto;
   background: rgba(255, 255, 255, 0.07);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
+  -ms-flex-preferred-size: 250px;
   flex-basis: 250px;
   border-radius: 10px;
   height: 640px;
   padding: 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: nowrap column;
   flex-flow: nowrap column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 10px -10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 10px -10px;
   position: relative;
   border: 1px solid rgba(225, 225, 225, 1);
@@ -489,7 +602,11 @@ export const Product = styled.div`
     border-radius: 100vw;
     text-align: center;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     /* border: 1px solid rgba(225, 225, 225, 0.5); */
 

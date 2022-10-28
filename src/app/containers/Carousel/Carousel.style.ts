@@ -16,36 +16,51 @@ export const DraggableArea = styled.div`
   background: transparent;
   top: 0;
   z-index: 2;
+  -ms-touch-action: pan-y;
   touch-action: pan-y;
 `;
 
 export const Container = styled.section<any>`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100%;
+  -webkit-transition: all ease 700ms;
+  -o-transition: all ease 700ms;
   transition: all ease 700ms;
   will-change: transform;
   position: relative;
 
   .carousel--item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 12px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 
     ${media.xsmall`
-      flex-basis: 100%
+      -ms-flex-preferred-size: 100%;
+       flex-basis: 100%
     `}
     ${media.small`
-      flex-basis: 100%
+      -ms-flex-preferred-size: 100%;
+       flex-basis: 100%
     `}
     ${media.medium`
+      -ms-flex-preferred-size: ${({ alocate }) => `calc(100% / ${alocate})`};
       flex-basis: ${({ alocate }) => `calc(100% / ${alocate})`};
     `}
     ${media.large`
+      -ms-flex-preferred-size: ${({ alocate }) => `calc(100% / ${alocate})`};
       flex-basis: ${({ alocate }) => `calc(100% / ${alocate})`};
     `}
     ${media.xlarge`
+      -ms-flex-preferred-size: ${({ alocate }) => `calc(100% / ${alocate})`};
       flex-basis: ${({ alocate }) => `calc(100% / ${alocate})`};
     `}
   }
